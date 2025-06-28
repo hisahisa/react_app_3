@@ -5,7 +5,7 @@ export const spanStyle = {
   top: 0,
   right: 0,
   bottom: 0,
-  backgroundColor: "rgba(168,168,17,0.1)", // マウスホバー時の色
+  opacity: 0,
   width: "5px",
   cursor: "col-resize",
 };
@@ -38,7 +38,7 @@ export const tableStyle = {
     paddingLeft: "5px",
   },
   "& tbody td": {
-    border: "1px solid #eeeeee",
+    border: "1px solid #eedeee",
     height: "30px",
     p: "0px 8px",
     wordWrap: "break-word",

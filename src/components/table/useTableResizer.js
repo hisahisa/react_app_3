@@ -11,10 +11,15 @@ export const useTableResizer = (columns, tableRef) => {
   // マウス移動処理
   const mouseMove = useCallback(
     (e) => {
+      // テーブル左端の位置を取得（基準値）
+      const tableLeft =
+          tableRef?.current?.getBoundingClientRect().left;
+
       const gridColumns = columns?.map((col, i) => {
         if (i === activeIndex) {
           const width =
-              tableRef?.current?.scrollLeft + e.clientX - col.ref.current.offsetLeft;
+            e.clientX - tableLeft -
+              (col.ref.current.offsetLeft - tableRef.current.scrollLeft);
           if (width >= minCellWidth) {
             return `${width}px`;
           }
@@ -26,7 +31,7 @@ export const useTableResizer = (columns, tableRef) => {
         tableRef.current.style.gridTemplateColumns = `${gridColumns?.join(" ")}`;
       }
     },
-    [activeIndex, columns, tableRef]
+    [activeIndex, columns, tableRef, minCellWidth]
   );
 
   // マウスアップ処理を useCallback で定義
