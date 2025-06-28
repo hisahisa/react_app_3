@@ -2,9 +2,9 @@ import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Container from "@mui/material/Container";
 import { Suspense, useState } from "react";
-import AppBar from "../components/layout/AppBar";
-import { MenuDrawer } from "../components/layout/MenuDrawer";
-import Footer from "../components/layout/Footer";
+import AppBar from "./AppBar";
+import { MenuDrawer } from "./MenuDrawer";
+import Footer from "./Footer";
 import { Outlet } from "react-router-dom";
 
 const Layout = () => {

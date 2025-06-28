@@ -2,7 +2,7 @@ import CssBaseline from "@mui/material/CssBaseline";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Layout from "./pages/Layout";
+import Layout from "./components/layout/Layout";
 import { lazy } from "react";
 
 const IndexPage = lazy(() => import("./pages/IndexPage"));
