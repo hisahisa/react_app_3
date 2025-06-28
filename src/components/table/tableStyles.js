@@ -57,17 +57,25 @@ export const tableStyle = {
 };
 
 /*
- ・ソート可能なテーブルヘッダーに適用するカスタムスタイル
- ・ホバー時やアクティブ状態の色のカスタマイズ
- ・ソートアイコン色変更  */
+ * ソート可能なテーブルヘッダーに適用するカスタムスタイル
+ * - 通常時、ホバー時、アクティブ時の文字色を調整
+ * - ソートアイコンの色も調整
+ */
 export const tableSortStyle = {
+  // 通常時のテキスト色
+  "&.MuiTableSortLabel-root": {
+    color: "rgb(255,255,255)", // デフォルトの文字色
+  },
+  // ホバー時のテキスト色
   "&.MuiTableSortLabel-root:hover": {
-    color: "rgba(255, 255, 0, 1)",
+    color: "rgb(248,255,30)", // ホバー時の文字色
   },
+  // アクティブ状態のテキスト色（ソート中の列）
   "&.Mui-active": {
-    color: "rgba(255, 255, 0, 1)",
+    color: "rgb(248,255,30)", // アクティブ時の文字色
   },
+  // ソートアイコンの色
   "& .MuiTableSortLabel-icon": {
-    color: "rgba(255, 255, 0, 1)  !important",
+    color: "rgb(248,255,30) !important", // ソートアイコンの色
   },
 };
