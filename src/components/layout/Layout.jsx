@@ -6,6 +6,7 @@ import AppBar from "./AppBar";
 import { MenuDrawer } from "./MenuDrawer";
 import Footer from "./Footer";
 import { Outlet } from "react-router-dom";
+import {containerStyles, layoutStyles} from "./layoutStyles";
 
 const Layout = () => {
   const [toggleOpen, setToggleOpen] = useState(true);
@@ -19,28 +20,12 @@ const Layout = () => {
       <MenuDrawer open={toggleOpen} toggleDrawer={handleToggleDrawer} />
       <Box
         component="main"
-        sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            minHeight: '100vh',
-            backgroundColor: (theme) =>
-                theme.palette.mode === "light"
-                ? theme.palette.grey[100]
-                : theme.palette.grey[900],
-            flexGrow: 1,
-            height: "100vh",
-            overflow: "auto",
-            position: 'relative'
-        }}
+        sx={layoutStyles}
       >
         <Toolbar />
         <Container
           maxWidth="xl"
-          sx={{
-            mt: 4,
-            mb: 4,
-              flexGrow: 1,
-          }}
+          sx={containerStyles}
         >
           <Suspense fallback={<div>Loading...</div>}>
             <Outlet />
