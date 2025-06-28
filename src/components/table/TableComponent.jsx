@@ -15,8 +15,6 @@ import TableHeaderCell from "./TableHeaderCell";
 export const TableComponent = ({ setTable, rows, sx }) => {
   const { headCells, tblSearchParams } = setTable;
   const columns = createHeaders(headCells);
-  console.log(rows?.length);
-  console.log(columns?.length);
   const tableRef = useRef();
   const { mouseDown } = useTableResizer(columns, tableRef);
 
