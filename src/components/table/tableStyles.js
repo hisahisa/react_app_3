@@ -22,7 +22,8 @@ export const tableStyle = {
     display: "contents",
   },
   "& thead th": {
-    border: "1px solid #eeeeee",
+    borderBottom: "1px solid #000",
+    borderLeft: "1px solid #000",
     bgcolor: "primary.main",
     color: "primary.fontColor",
     height: "30px",
@@ -38,7 +39,8 @@ export const tableStyle = {
     paddingLeft: "5px",
   },
   "& tbody td": {
-    border: "1px solid #eedeee",
+    borderBottom: "1px solid #000",
+    borderLeft: "1px solid #000",
     height: "30px",
     p: "0px 8px",
     wordWrap: "break-word",
@@ -49,6 +51,9 @@ export const tableStyle = {
     fontSize: "0.78rem",
     lineHeight: "30px",
     alignItems: "center",
+  },
+  "& tbody tr > td:last-child, & thead tr > th:last-child": {
+    borderRight: "1px solid #000", // 右側の縦線追加
   },
   "& tbody tr:hover > td": {
     backgroundColor: "#80d8ff",
