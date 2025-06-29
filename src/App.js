@@ -8,6 +8,7 @@ import { lazy } from "react";
 const IndexPage = lazy(() => import("./pages/IndexPage"));
 const UsersPage = lazy(() => import("./pages/UserList"));
 const ItemsPage = lazy(() => import("./pages/ItemList"));
+const StorePage = lazy(() => import("./pages/StoreList"));
 
 const theme = createTheme();
 
@@ -22,6 +23,7 @@ export default function App() {
               <Route index element={<IndexPage />} />
               <Route path="/users" element={<UsersPage />} />
               <Route path="/items" element={<ItemsPage />} />
+              <Route path="/stores" element={<StorePage />} />
             </Route>
           </Routes>
         </BrowserRouter>
